@@ -1,0 +1,55 @@
+### OMP-WhIP
+
+Top level README for OMP-WhIP. Includes instructions to build and how to profile
+a given OpenMP application. 
+
+### Getting Started
+
+These instructions will get build OMP-WhIP on the local machine.
+
+### Prerequisites
+
+To build omp-whip we rely on three software dependencies:
+1) As tested, Linux Ubuntu 16.04 LTS distribution with perf event modules
+installed. 
+2) LLVM+Clang compiled with the provided OpenMP runtime with OMPT support.
+3）Common packages such as git and cmake.
+
+### Installing
+
+In the directory where this README resides, there are two bash scripts that 
+automate the installation of OMP-WhIP and all its dependencies. To build 
+OMP-WhIP first run:
+
+$ source setup-llvm.sh
+
+This script has to be run only once and it uses git to download llvm+clang 5.0. 
+After the download completes, it builds and installs llvm+clang+openmp
+in the root directory of OMP-WhIP. The script is set up to use -j 4 to make
+llvm. If you have sufficient resources, you can change this value to speed up 
+the compilation process. (As tested, gcc 5.4.0 was used to build llvm)
+
+Next, run:
+
+$ source setup-ompwhip.sh
+
+This script builds OMP-WhIP's offline profiler and analyzer. It exports several
+environment variables that are needed for OMP-WhIP to function. this script has
+to be run in every new shell to ensure that these environment variables are set
+up correctly. 
+
+This script sets up the $PGEN variable where it refers to the locations of
+the provided analysis tool that generates the parallelism and what-if profile
+from the gathered performance data during a profiling run of an OpenMP program.
+
+To use the on-the-fly profiler, instead run:
+
+$ source setup-ompwhip-online.sh
+
+This script sets up the on-the-fly profiler so that provided applications run using
+it instead. Note that in this mode, there is no need to run the offline analysis 
+tool and the profile gets generated in log/profiler_output.csv
+
+### Running the tests
+
+TODO update with instructions to download the benchmarks
