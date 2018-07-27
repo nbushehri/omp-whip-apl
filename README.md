@@ -11,15 +11,15 @@ These instructions will get build OMP-WhIP on the local machine.
 
 To build omp-whip we rely on the following software dependencies:
 
-1)As tested, Linux Ubuntu 16.04 LTS distribution with perf event modules installed. To check if the machine supports hardware performance counters, use the command,
+1) As tested, Linux Ubuntu 16.04 LTS distribution with perf event modules installed. To check if the machine supports hardware performance counters, use the command,
 	
 	dmesg | grep PMU
 
 If the output is "Performance Events: Unsupported...", then the machine does not support performance counters and omp-whip cannot be executed on the machine.
 
-2)LLVM+Clang compiled with the provided OpenMP runtime with OMPT support. For more information, refer to the installation section.
+2) LLVM+Clang compiled with the provided OpenMP runtime with OMPT support. For more information, refer to the installation section.
 
-3）Common packages such as git, cmake, python2.7.
+3） Common packages such as git, cmake, python2.7.
 
 ## Installation
 
