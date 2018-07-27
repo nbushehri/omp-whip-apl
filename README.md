@@ -1,12 +1,5 @@
 omp-whip is parallelism profiler with what-if analyses for OpenMP programs. 
 
-Top level README for OMP-WhIP. Includes instructions to build and how to profile
- a given OpenMP application. 
-
-### Getting Started
-
-These instructions will get build OMP-WhIP on the local machine.
-
 ## Prerequisites
 
 To build omp-whip we rely on the following software dependencies:
@@ -19,7 +12,7 @@ If the output is "Performance Events: Unsupported...", then the machine does not
 
 2) LLVM+Clang compiled with the provided OpenMP runtime with OMPT support. For more information, refer to the installation section.
 
-3） Common packages such as git, cmake, python2.7.
+3) Common packages such as git, cmake, python2.7.
 
 ## Installation
 
