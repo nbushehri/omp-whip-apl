@@ -1,4 +1,4 @@
-omp-whip is parallelism profiler with what-if analyses for OpenMP programs. 
+omp-whip is parallelism profiler with what-if analyses for OpenMP programs. To download the applications for which we could improve speedups are provided in the directory, use the url https://goo.gl/Ach9Vw
 
 ## Prerequisites
 
