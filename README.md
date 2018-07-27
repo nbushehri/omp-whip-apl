@@ -17,7 +17,8 @@ To build omp-whip we rely on the following software dependencies:
 If the output is "Performance Events: Unsupported...", then the machine does not support performance counters and omp-whip cannot be executed on the machine.
 
 2) LLVM+Clang compiled with the provided OpenMP runtime with OMPT support. For more information, refer to the installation section.
-3）Common packages such as git and cmake.
+
+3）Common packages such as git, cmake, python2.7.
 
 ## Installation
 
